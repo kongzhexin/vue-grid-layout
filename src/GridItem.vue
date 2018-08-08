@@ -623,8 +623,8 @@
                         // 0 * Infinity === NaN, which causes problems with resize constriants;
                         // Fix this if it occurs.
                         // Note we do it here rather than later because Math.round(Infinity) causes deopt
-                      width: w === Infinity ? w : Math.round(colWidth * w + useingMargin ? (Math.max(0, w - 1) * this.margin[0]) : 0),
-                        height: h === Infinity ? h : Math.round(this.rowHeight * h + useingMargin ? (Math.max(0, h - 1) * this.margin[1]) : 0)
+                      width: w === Infinity ? w : Math.round(colWidth * w + this.useingMargin ? (Math.max(0, w - 1) * this.margin[0]) : 0),
+                        height: h === Infinity ? h : Math.round(this.rowHeight * h + this.useingMargin ? (Math.max(0, h - 1) * this.margin[1]) : 0)
                     };
                 } else {
                     var out = {
@@ -633,8 +633,8 @@
                         // 0 * Infinity === NaN, which causes problems with resize constriants;
                         // Fix this if it occurs.
                         // Note we do it here rather than later because Math.round(Infinity) causes deopt
-                        width: w === Infinity ? w : Math.round(colWidth * w + useingMargin ? (Math.max(0, w - 1) * this.margin[0]) : 0),
-                        height: h === Infinity ? h : Math.round(this.rowHeight * h + useingMargin ? (Math.max(0, h - 1) * this.margin[1]) : 0)
+                        width: w === Infinity ? w : Math.round(colWidth * w + this.useingMargin ? (Math.max(0, w - 1) * this.margin[0]) : 0),
+                        height: h === Infinity ? h : Math.round(this.rowHeight * h + this.useingMargin ? (Math.max(0, h - 1) * this.margin[1]) : 0)
                     };
                 }
 
